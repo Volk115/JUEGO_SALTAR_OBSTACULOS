@@ -6,17 +6,23 @@ public class RepeatBackground : MonoBehaviour
 {
     private Vector3 startPos;
     public float repeatWidth;
-    // Start is called before the first frame update
+    
     void Start()
     {
+        //GUARDAMOS LA POSICION INICIAL DEL FONDO
         startPos = transform.position;
+
+        //TOMAMOS LA MITAD DE LA ANCHURA DEL FONDO
         repeatWidth = GetComponent<BoxCollider>().size.x / 2;
     }
-
-    // Update is called once per frame
+ 
     void Update()
     {
+        //SI NOS DESPLAZADMOS REPEATWITHMETROS
         if (transform.position.x < startPos.x - repeatWidth)
-        { transform.position = startPos; }
+        {
+            //VOLVEMOS A LA POSICION INICIAL
+            transform.position = startPos;
+        }
     }
 }
