@@ -12,13 +12,17 @@ public class MoveLeft : MonoBehaviour
     {
         //TIENE UN COLISIONADOR CON EL SUJETO "PLAYER"
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+
+
     }
     
     void Update()
     {
         //LOS OBJETOS SE MOVERAN HACIA LA IZQUIERDA
         if(!playerControllerScript.gameOver)
-        { transform.Translate(Vector3.left * speed * Time.deltaTime); }
+        { 
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
+        }
 
         //LOS OBJETOS, DESAPARECERAN AL CAER A MENOS DE 0, -1, 0
         if(transform.position.y <= -1)

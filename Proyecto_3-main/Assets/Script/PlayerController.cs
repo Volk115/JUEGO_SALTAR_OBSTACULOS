@@ -19,14 +19,14 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnimator;
     private Animator playerdeath;
 
-    //MUSICA
+    //MUSICA Y EFECTOS DE SONIDO
     private AudioSource playerAudioSource;
     private AudioSource cameraAudioSource;
 
-    //EXPLOSION DE PARTICULAS
     public AudioClip explosionClip;
     public AudioClip jumpClip;
 
+    //EXPLOSION DE PARTICULAS
     public ParticleSystem explosionParticleSystem;
     public ParticleSystem dirtParticleSystem;
 
